@@ -41,10 +41,10 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2.0, animations: {
             self.textView.contentOffset = CGPoint(x: 0, y: self.y)
         }, completion: nil)
-        y += 25
+        y += 10
         let yMax = self.textView.contentSize
         if(Int(yMax.height/1.5) < y){
-        y -= 25
+        y -= 10
       }
     }
     
@@ -72,24 +72,23 @@ class ViewController: UIViewController {
         AudioKit.output = tracker
         AudioKit.start()
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true, block: { _ in
             let possibleNotes = Note.possibleNotes(for: tracker.frequency)
             print(possibleNotes)
             self.noteArray.removeLast()
             self.noteArray.insert(possibleNotes, at: 0)
             
+            for i in self.microphoneNotes {
+                
+                if (i == possibleNotes.description)
+                {
+                    self.buttonPress(self)
+                }
+            }
             
+
         })
-        
         self.startScroll(true);
-        
-    for i in self.microphoneNotes {
-    
-        if (i == noteArray.index(after: 0).description)
-        {
-            self.buttonPress(self)
-        }
-    }
     }
 
     override func viewDidLoad() {
