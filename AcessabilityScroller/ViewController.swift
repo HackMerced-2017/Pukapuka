@@ -9,12 +9,32 @@
 import UIKit
 import AudioKit
 
+import Foundation
+
+func matches(for regex: String, in text: String) -> [String] {
+    
+    do {
+        let regex = try NSRegularExpression(pattern: regex)
+        let nsString = text as NSString
+        let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+        return results.map { nsString.substring(with: $0.range)}
+    } catch let error {
+        print("invalid regex: \(error.localizedDescription)")
+        return []
+    }
+}
+
+
 class ViewController: UIViewController {
 
     var noteArray = Array<[Note]!>(repeating: nil, count: 10)
+    var songNotes = Array<String>()
+    var microphoneNotes = Array<String>()
     @IBOutlet weak var textView: UITextView!
     var y = 0;
     let mic = AKMicrophone()
+    
+    var counter = 0;
     
     
     @IBAction func buttonPress(_ sender: Any) {
@@ -28,23 +48,50 @@ class ViewController: UIViewController {
       }
     }
     
+    func startScroll(_ animated: Bool)
+    {
+        songNotes = matches (for: "\\[[A-z0-9]{1,2}\\]", in: textView.text )
+        for var j in songNotes {
+            if( j.contains("m")){
+                j = j.replacingOccurrences(of: "m", with: "")
+            }
+            else if (j.contains("7"))
+            {
+                j = j.replacingOccurrences(of: "7", with: "")
+            }
+            microphoneNotes.append(j)
+        }
+
+        print(microphoneNotes)
+        }
+ 
+    
     override func viewDidAppear(_ animated: Bool) {
         
         let tracker = AKFrequencyTracker(mic, hopSize: 20, peakCount: 2000)
         AudioKit.output = tracker
         AudioKit.start()
         
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
             let possibleNotes = Note.possibleNotes(for: tracker.frequency)
             print(possibleNotes)
             self.noteArray.removeLast()
             self.noteArray.insert(possibleNotes, at: 0)
+            
+            
         })
         
+        self.startScroll(true);
+        
+    for i in self.microphoneNotes {
+    
+        if (i == noteArray.index(after: 0).description)
+        {
+            self.buttonPress(self)
+        }
+    }
     }
 
-    
-    
     override func viewDidLoad() {
         super.loadView()
         // Do any additional setup after loading the view, typically from a nib.

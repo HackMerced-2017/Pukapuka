@@ -56,6 +56,7 @@
 		4444E8431E4FBAE600F23AE9 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		4444E8491E4FDCF200F23AE9 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		4444E8501E4FDE9800F23AE9 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		4482C8911E5027ED007DBFA3 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
 		448BD4F81E4F95E3004ABA95 /* AcessabilityScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcessabilityScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448BD4FB1E4F95E3004ABA95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		448BD4FD1E4F95E3004ABA95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		448BD4EF1E4F95E3004ABA95 = {
 			isa = PBXGroup;
 			children = (
+				4482C8911E5027ED007DBFA3 /* Dollar.framework */,
 				4444E8501E4FDE9800F23AE9 /* AudioKit.framework */,
 				448BD4FA1E4F95E3004ABA95 /* AcessabilityScroller */,
 				448BD50F1E4F95E3004ABA95 /* AcessabilityScrollerTests */,
@@ -459,6 +461,7 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Swift/AutoScroller1/Carthage/Build/iOS",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Swift/AutoScroller1/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AcessabilityScroller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -478,6 +481,7 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Swift/AutoScroller1/Carthage/Build/iOS",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/Swift/AutoScroller1/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AcessabilityScroller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -18,6 +18,7 @@ struct Note : CustomStringConvertible {
         let text = try! String(contentsOf: csv)
         let lines = text.components(separatedBy: "\r\n")
         
+        
         var notes = [Note]()
         
         for line in lines {
@@ -83,7 +84,8 @@ struct Note : CustomStringConvertible {
     let frequency: Double
     
     var description: String {
-        return "\(name) \(octave)"
+        return "\(name)"
     }
+    
     
 }

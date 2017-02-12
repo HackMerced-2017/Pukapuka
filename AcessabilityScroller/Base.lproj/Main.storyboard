@@ -23,45 +23,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="00V-L0-K9W">
-                                <rect key="frame" x="66" y="95" width="243" height="476"/>
+                                <rect key="frame" x="66" y="95" width="243" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Born down in a dead man's town
-The first kick I took was when I hit the ground
-End up like a dog that's been beat too much
-Till you spend half your life just covering up
+                                <mutableString key="text">[Dm]Here come old flat top, 
 
-Born in the U.S.A., I was born in the U.S.A.
-I was born in the U.S.A., born in the U.S.A.
+He come grooving up slowly,
 
-Got in a little hometown jam
-So they put a rifle in my hand
-Sent me off to a foreign land
-To go and kill the yellow man
+[Dm]He got Joo Joo eyeball, He one holy roller 
 
-Born in the U.S.A., I was born in the U.S.A.
-Born in the U.S.A., born in the U.S.A.
+He got [A7]hair down to his knee;  
 
-Come back home to the refinery
-Hiring man said "son if it was up to me"
-Went down to see my V.A. man
-He said "son, don't you understand"
+[G7]Got to be a joker, he just do what he please.
 
-I had a brother at Khe Sahn
-Fighting off the Viet Cong
-They're still there, he's all gone
+ [Dm]He wear no shoe shine, he got toe jam football
 
-He had a woman he loved in Saigon
-I got a picture of him in her arms now
+[Dm]He got monkey finger, he shoot co-ca cola
 
-Down in the shadow of the penitentiary
-Out by the gas fires of the refinery
-I'm ten years burning down the road
-Nowhere to run ain't got nowhere to go
+He say, [A7]"I know you, you know me."  
 
-Born in the U.S.A., I was born in the U.S.A.
-Born in the U.S.A., I'm a long gone daddy in the U.S.A.
-Born in the U.S.A., born in the U.S.A.
-Born in the U.S.A., I'm a cool rocking daddy in the U.S.A.</string>
+[G7]One thing I can tell you is you got to be free
+
+Come [Bm]Together, Right [G]now, [A]over me
+
+[Dm]He bag production, He got wal-rus gumboot
+
+[Dm]He got O-no sideboard, He one spinal cracker
+
+He got [A7]feet down below his knee
+
+[G7]Hold you in his armchair, you can feel his disease 
+
+Come [Bm]together, right [G]now, [A] over me
+
+[Dm]He roller coaster, he got early warning
+
+[Dm]He got muddy water, He one Mo-jo filter
+
+He say, [A7]" One and one and one is three."
+
+[G7]Got to be good looking 'cause he so hard to see 
+
+Come [Bm]together, right [G]now, [A]over me</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
